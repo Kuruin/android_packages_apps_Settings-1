@@ -29,12 +29,14 @@ import android.os.Bundle;
 import android.provider.Settings;
 
 import java.util.Random;
+import android.view.View;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.annotation.ColorInt;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settings.R;
 import com.android.settings.core.SubSettingLauncher;
@@ -67,6 +69,13 @@ public class TopLevelSettings extends DashboardFragment implements
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.top_level_settings;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        final RecyclerView recyclerView = getView().findViewById(R.id.recycler_view);
+        recyclerView.setOverScrollMode(View.OVER_SCROLL_NEVER);
     }
 
     @Override
