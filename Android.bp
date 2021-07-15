@@ -31,7 +31,9 @@ android_library {
            "RavenLair/src/**/*.java",
     ],
 
-    aaptflags: ["--extra-packages com.raven.lair"],
+    aaptflags: ["--extra-packages com.raven.lair",
+                "--extra-packages com.factor.bouncy"
+                ],
 
     resource_dirs: ["res",
                     "RavenLair/res"
@@ -67,11 +69,9 @@ android_library {
         "vendor.lineage.fastcharge-V1.0-java",
         "airbnb-lottie",
         "faceunlock_framework",
-<<<<<<< HEAD
         "glide",
-=======
         "androidx.dynamicanimation_dynamicanimation",
->>>>>>> 5622be46af... Settings: Add Bouncy scrollview from OOS
+        "bouncy",
     ],
 
     libs: [
@@ -116,4 +116,10 @@ android_library_import {
 android_library_import {
     name: "glide",
     aars: ["libs/glide-4.9.0.aar"],
+}
+
+android_library_import {
+    name: "bouncy",
+    aars: ["libs/bouncy-release.aar"],
+    sdk_version: "current",
 }
