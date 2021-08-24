@@ -80,6 +80,9 @@
 
     </PreferenceCategory>
 
+     <PreferenceCategory
+        android:key="battery_info_category">
+
     <com.android.settings.fuelgauge.PowerGaugePreference
         android:key="designed_battery_capacity"
 	android:icon="@drawable/ic_battery_capacity"
@@ -97,6 +100,8 @@
 	android:icon="@drawable/ic_charge_cycles_completed"
         android:title="@string/battery_charge_cycles"
         android:selectable="false" />
+
+    </PreferenceCategory>
 
     <com.android.settings.fuelgauge.PowerGaugePreference
         android:key="battery_temp"
