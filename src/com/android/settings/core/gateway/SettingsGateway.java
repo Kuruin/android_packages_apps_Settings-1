@@ -164,7 +164,6 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.raven.lair.RavenLair;
-import com.raven.lair.fragments.GamingMode;
 
 public class SettingsGateway {
 
@@ -316,8 +315,7 @@ public class SettingsGateway {
             InteractAcrossProfilesDetails.class.getName(),
             MediaControlsSettings.class.getName(),
             RavenLair.class.getName(),
-            RunningServices.class.getName(),
-            GamingMode.class.getName()
+            RunningServices.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -360,6 +358,5 @@ public class SettingsGateway {
             Settings.RavenLairActivity.class.getName(),
             StartThemes.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
-            Settings.GamingModeActivity.class.getName(),
     };
 }

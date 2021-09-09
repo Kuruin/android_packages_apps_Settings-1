@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         package="com.android.settings"
         coreApp="true"
         android:sharedUserId="android.uid.system">
@@ -124,7 +125,8 @@
             android:usesCleartextTraffic="true"
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
-            android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+            android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+            tools:replace="android:appComponentFactory">
 
         <uses-library android:name="org.apache.http.legacy" />
         <!-- Settings -->
@@ -2712,6 +2714,12 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name="com.android.settingslib.bluetooth.BluetoothTimeoutReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.intent.TIMEOUT" />
+            </intent-filter>
+        </receiver>
+
         <!-- Watch for ContactsContract.Profile changes and update the user's photo.  -->
         <receiver android:name=".users.ProfileUpdateReceiver">
             <intent-filter>
@@ -3522,23 +3530,6 @@
                 <data android:scheme="settings"
                       android:host="com.android.settings.backup.transport" />
             </intent-filter>
-        </activity>
-        <receiver android:name="com.raven.lair.fragments.GamingModeReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.GAMING_MODE_TURN_OFF" />
-                <action android:name="android.intent.action.GAMING_MODE_TURN_ON" />
-            </intent-filter>
-        </receiver>
-        <activity android:name=".Settings$GamingModeActivity"
-            android:label="@string/gaming_mode_title"
-            android:taskAffinity="com.android.settings"
-            android:parentActivityName="Settings">
-            <intent-filter android:priority="1">
-                <action android:name="android.settings.GAMING_MODE_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.raven.lair.fragments.GamingMode" />
         </activity>
 
         <!-- Face unlock -->
