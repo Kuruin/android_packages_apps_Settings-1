@@ -57,12 +57,14 @@
 
     <com.android.settings.corvus.preferences.SystemSettingSwitchPreference
         android:key="proximity_on_wake"
+        android:icon="@drawable/ic_wake_sensor"
         android:title="@string/proximity_wake_title"
         android:summary="@string/proximity_wake_summary"
         android:defaultValue="false" />
 
     <com.android.settings.corvus.preferences.SystemSettingSwitchPreference
         android:key="high_touch_sensitivity_enable"
+        android:icon="@drawable/ic_touch_sensitivity"
         android:title="@string/high_touch_sensitivity_title"
         android:summary="@string/high_touch_sensitivity_summary"
         android:defaultValue="false"
@@ -81,7 +83,7 @@
 
     <com.android.settingslib.RestrictedPreference
         android:key="brightness"
-        android:icon="@drawable/ic_settings_adaptive_brightness"
+        android:icon="@drawable/ic_brightness_level"
         android:title="@string/brightness"
         settings:keywords="@string/keywords_display_brightness_level"
         settings:useAdminDisabledSummary="true"
