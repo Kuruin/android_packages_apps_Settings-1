@@ -65,7 +65,6 @@ android_library {
         "android.hardware.dumpstate-V1.1-java",
         "VendorSupport-preference",
         "vendor.lineage.fastcharge-V1.0-java",
-        "airbnb-lottie",
         "faceunlock_framework",
         "glide",
     ],
